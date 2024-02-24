@@ -18,7 +18,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const home = ({navigation}) => {
   const [currentSelected, setCurrentSelected] = useState([0]);
-
+  const [search, setSearch] = useState('');
   const renderCategories = ({item, index}) => {
     return (
       <TouchableOpacity
@@ -291,11 +291,12 @@ const home = ({navigation}) => {
               flexDirection: 'row',
               alignItems: 'center',
             }}>
-            <Ionicons
-              name="search"
+            <AntDesign
+              name="search1"
               style={{fontSize: 20, color: COLOURS.black, opacity: 0.8}}
             />
             <TextInput
+              onChangeText={a => setSearch(a)}
               placeholder="Search..."
               style={{
                 color: COLOURS.black,
@@ -336,7 +337,9 @@ const home = ({navigation}) => {
             }}>
             Popular
           </Text>
-          {Categories[currentSelected].items.map(renderItems)}
+          {Categories[currentSelected].items
+            .filter(a => a.name.toLowerCase().includes(search))
+            .map(renderItems)}
           <TouchableOpacity
             style={{
               margin: 30,

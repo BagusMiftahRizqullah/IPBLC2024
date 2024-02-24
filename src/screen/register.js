@@ -18,7 +18,7 @@ const register = props => {
         }}>
         {/* Logo */}
         <View style={{alignItems: 'center', paddingTop: 112}}>
-          <Text style={{fontSize: 32, fontWeight: 'bold'}}>
+          <Text style={{color: '#000000', fontSize: 32, fontWeight: 'bold'}}>
             Hello, Welcome to IPBLC
           </Text>
         </View>
@@ -26,7 +26,15 @@ const register = props => {
         {/* FORM lOGIN */}
         <View style={{paddingTop: 63}}>
           <View style={{justifyContent: 'flex-start'}}>
-            <Text style={{paddingBottom: 12}}>User name</Text>
+            <Text
+              style={{
+                paddingBottom: 12,
+                fontWeight: 'bold',
+                fontSize: 18,
+                color: 'black',
+              }}>
+              User name
+            </Text>
             <View
               style={{
                 borderColor: '#000000',
@@ -39,7 +47,15 @@ const register = props => {
           </View>
           <View style={{height: 12}} />
           <View style={{justifyContent: 'flex-start'}}>
-            <Text style={{paddingBottom: 12}}>Email</Text>
+            <Text
+              style={{
+                paddingBottom: 12,
+                fontWeight: 'bold',
+                fontSize: 18,
+                color: 'black',
+              }}>
+              Email
+            </Text>
             <View
               style={{
                 borderColor: '#000000',
@@ -52,7 +68,15 @@ const register = props => {
           </View>
           <View style={{height: 12}} />
           <View style={{justifyContent: 'flex-start'}}>
-            <Text style={{paddingBottom: 12}}>Password</Text>
+            <Text
+              style={{
+                paddingBottom: 12,
+                fontWeight: 'bold',
+                fontSize: 18,
+                color: 'black',
+              }}>
+              Password
+            </Text>
             <View
               style={{
                 borderColor: '#000000',
@@ -65,20 +89,28 @@ const register = props => {
           </View>
         </View>
 
-        <View style={{height: 123}} />
+        <View style={{height: 100}} />
 
         {/* bUTTON lOGIN */}
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              props.navigation.navigate('login');
-            }}
-            style={{
-              backgroundColor: 'green',
-              borderRadius: 8,
-              alignItems: 'center',
-            }}>
-            <Text style={{color: '#ffffff', padding: 12}}>Register</Text>
+          <TouchableOpacity onPress={() => props.navigation.navigate('home')}>
+            <View
+              style={{
+                height: 50,
+                backgroundColor: '#00AA13',
+                alignItems: 'center',
+                borderRadius: 12,
+                justifyContent: 'center',
+              }}>
+              <Text
+                style={{
+                  alignItems: 'center',
+                  fontWeight: 'bold',
+                  color: 'white',
+                }}>
+                Register
+              </Text>
+            </View>
           </TouchableOpacity>
         </View>
 
@@ -90,6 +122,7 @@ const register = props => {
             <Text
               style={{
                 fontWeight: '400',
+                color: '#000000',
               }}>
               Already have account ?
             </Text>

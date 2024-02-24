@@ -4,6 +4,8 @@ import {
   TextInput,
   View,
   TouchableOpacity,
+  Image,
+  Animated,
 } from 'react-native';
 import React from 'react';
 
@@ -12,12 +14,16 @@ const login = props => {
     <View style={{flex: 1, padding: 32}}>
       <View style={{height: 100}} />
       {/* logo */}
-      <View style={{height: 100}}>
-        <Text style={{fontSize: 32, fontWeight: 'bold', textAlign: 'center'}}>
-          LOGO IPBLC
-        </Text>
-      </View>
-      <View style={{height: 53}} />
+      <Image
+        source={require('../database/images/logo.png')}
+        style={{
+          alignSelf: 'center',
+          width: 200,
+          height: 200,
+          resizeMode: 'center',
+        }}
+      />
+      <View style={{height: 8}} />
       <View>
         {/* Email */}
         <View>
